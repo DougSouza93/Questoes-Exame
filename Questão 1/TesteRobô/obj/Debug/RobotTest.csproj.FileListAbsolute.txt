@@ -1,0 +1,31 @@
+c:\users\isabella.riquetti\documents\visual studio 2015\Projects\TesteRobô\TesteRobô\bin\Debug\TesteRobô.exe.config
+c:\users\isabella.riquetti\documents\visual studio 2015\Projects\TesteRobô\TesteRobô\bin\Debug\TesteRobô.exe
+c:\users\isabella.riquetti\documents\visual studio 2015\Projects\TesteRobô\TesteRobô\bin\Debug\TesteRobô.pdb
+c:\users\isabella.riquetti\documents\visual studio 2015\Projects\TesteRobô\TesteRobô\obj\Debug\RobotTest.TestForm.resources
+c:\users\isabella.riquetti\documents\visual studio 2015\Projects\TesteRobô\TesteRobô\obj\Debug\TesteRobô.Properties.Resources.resources
+c:\users\isabella.riquetti\documents\visual studio 2015\Projects\TesteRobô\TesteRobô\obj\Debug\RobotTest.csproj.GenerateResource.Cache
+c:\users\isabella.riquetti\documents\visual studio 2015\Projects\TesteRobô\TesteRobô\obj\Debug\TesteRobô.exe
+c:\users\isabella.riquetti\documents\visual studio 2015\Projects\TesteRobô\TesteRobô\obj\Debug\TesteRobô.pdb
+C:\Users\888764\Desktop\TesteRobô\TesteRobô\bin\Debug\TesteRobô.exe.config
+C:\Users\888764\Desktop\TesteRobô\TesteRobô\bin\Debug\TesteRobô.exe
+C:\Users\888764\Desktop\TesteRobô\TesteRobô\bin\Debug\TesteRobô.pdb
+C:\Users\888764\Desktop\TesteRobô\TesteRobô\obj\Debug\RobotTest.csprojResolveAssemblyReference.cache
+C:\Users\888764\Desktop\TesteRobô\TesteRobô\obj\Debug\RobotTest.TestForm.resources
+C:\Users\888764\Desktop\TesteRobô\TesteRobô\obj\Debug\TesteRobô.Properties.Resources.resources
+C:\Users\888764\Desktop\TesteRobô\TesteRobô\obj\Debug\RobotTest.csproj.GenerateResource.Cache
+C:\Users\888764\Desktop\TesteRobô\TesteRobô\obj\Debug\TesteRobô.exe
+C:\Users\888764\Desktop\TesteRobô\TesteRobô\obj\Debug\TesteRobô.pdb
+C:\Users\888764\Desktop\TesteRobô\TesteRobô\bin\Debug\AngleSharp.dll
+C:\Users\888764\Desktop\TesteRobô\TesteRobô\bin\Debug\AngleSharp.xml
+C:\Users\Douglas\Desktop\Questões\Questão 1\TesteRobô\bin\Debug\TesteRobô.exe.config
+C:\Users\Douglas\Desktop\Questões\Questão 1\TesteRobô\bin\Debug\TesteRobô.exe
+C:\Users\Douglas\Desktop\Questões\Questão 1\TesteRobô\bin\Debug\TesteRobô.pdb
+C:\Users\Douglas\Desktop\Questões\Questão 1\TesteRobô\bin\Debug\AngleSharp.dll
+C:\Users\Douglas\Desktop\Questões\Questão 1\TesteRobô\bin\Debug\AngleSharp.xml
+C:\Users\Douglas\Desktop\Questões\Questão 1\TesteRobô\obj\Debug\RobotTest.csprojResolveAssemblyReference.cache
+C:\Users\Douglas\Desktop\Questões\Questão 1\TesteRobô\obj\Debug\RobotTest.TestForm.resources
+C:\Users\Douglas\Desktop\Questões\Questão 1\TesteRobô\obj\Debug\TesteRobô.Properties.Resources.resources
+C:\Users\Douglas\Desktop\Questões\Questão 1\TesteRobô\obj\Debug\RobotTest.csproj.GenerateResource.Cache
+C:\Users\Douglas\Desktop\Questões\Questão 1\TesteRobô\obj\Debug\RobotTest.csproj.CoreCompileInputs.cache
+C:\Users\Douglas\Desktop\Questões\Questão 1\TesteRobô\obj\Debug\TesteRobô.exe
+C:\Users\Douglas\Desktop\Questões\Questão 1\TesteRobô\obj\Debug\TesteRobô.pdb

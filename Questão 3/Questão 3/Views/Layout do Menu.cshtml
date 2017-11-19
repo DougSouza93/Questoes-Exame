@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+</head>
+<body class="container">
+    <header>
+        <div class="container">
+            <div id="view">
+                <h1 class="text-center">Menu</h1>
+                <table class="table table-centered">
+                    <thead>
+                        <tr><th>Item</th><th>Preço</th></tr>
+                    </thead>
+                    <tbody id="menu">
+                    </tbody>
+                </table>
+                <p class="text-center">
+                    <button class="btn btn-primary" id="primeiro">Primeiro Menu</button>
+                    <button class="btn btn-primary" id="segundo">Segundo Menu</button>
+                    <button class="btn btn-primary" id="terceiro">Terceiro Menu</button>
+                    <button class="btn btn-primary" id="viewOrder">Ver Pedidos</button>
+                </p>
+            </div>
+
+            <div id="order">
+                <h2>Seu Pedido</h2>
+                <table class="table table-centered">
+                    <thead>
+                        <tr><th>Item</th><th>Preço</th></tr>
+                    </thead>
+                    <tbody id="items">
+                    </tbody>
+                </table>
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label for="name" class="control-label">Seu nome:</label>
+                        <input type="text" class="form-control" id="name">
+                        <label for="mail" class="control-label">E-Mail:</label>
+                        <input type="text" class="form-control" id="mail">
+                        <button class="btn btn-primary" id="place">Fazer Pedido</button>
+                        <button class="btn btn-primary" id="back">Voltar ao Menu</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="confirm">
+                <h2>Obrigado!</h2>
+                <p>Seu pedido foi feito.</p>
+            </div>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script src="cafe.js"></script>
+        </div>
+
+    </header>
+
+    <section>
+
+        <div>
+            @RenderBody()
+        </div>
+    </section>
+
+    <footer></footer>
+
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        var items = [{ id: 0, item: 'Item 1', Preço: 'R$ 1', Menu: 'L' }, { id: 1, item: 'Item 2', Preço: 'R$ 1', Menu: 'L' },
+            { id: 2, item: 'Item 3', Preço: 'R$ 1', Menu: 'B' }, { id: 3, item: 'Item 4', Preço: 'R$ 1', Menu: 'L' },
+            { id: 4, item: 'Item 5', Preço: 'R$ 1', Menu: 'D' }, { id: 5, item: 'Item 6', Preço: 'R$ 1', Menu: 'B' },
+            { id: 6, item: 'Item 7', Preço: 'R$ 1', Menu: 'D' }, { id: 7, item: 'Item 8', Preço: 'R$ 1', Menu: 'B' },
+            { id: 8, item: 'Item 9', Preço: 'R$ 1', Menu: 'D' }];
+               
+        var order = [];
+
+        function orderItem() {
+            order.push(items[$(this).attr('data-id')]);
+            $('button#viewOrder').show();
+            $(this).blur();
+        }
+        
+        function displayItems(items) {
+            var table, newRow, orderButton;
+            var n, length;
+            
+            $('#menu tr').remove();
+
+            length = items.length;
+            for (n = 0; n < length; n++) {
+                newRow = $('<tr>').html('<td>' + items[n].item + '</td><td>' + items[n].Preço + '</td>');
+                orderButton = $('<button>');
+                orderButton.text('Pedir').attr('data-id', items[n].id);
+                orderButton.click(orderItem);
+                orderButton.addClass('btn');
+                newRow.append(orderButton);
+                $('#menu').append(newRow);
+            }
+        }
+        
+        function removeItem() {
+            order.splice($(this).attr('data-index'), 1);
+            displayOrders();
+        }
+        
+        function displayOrders() {
+            var table, newRow, removeButton;
+            var n, length;
+            
+            $('#items tr').remove();
+            
+            length = order.length;
+            for (n = 0; n < length; n++) {
+                newRow = $('<tr>').html('<td>' + order[n].item + '</td><td>' + order[n].Preço + '</td>');
+                removeButton = $('<button>');
+                removeButton.text('Remover').attr('data-index', n);
+                removeButton.click(removeItem);
+                removeButton.addClass('btn');
+                newRow.append(removeButton);
+                $('#items').append(newRow);
+            }
+        }
+        
+        function filterList(list, Menu) {
+            var result, n, length;
+
+            result = []; 
+            length = list.length;
+            for (n = 0; n < length; n++) {
+                if (list[n].Menu == Menu)
+                    result.push(list[n]); 
+            }
+
+            return result;
+        }
+        
+        function displayMenu(Menu) {
+            var newList;
+
+            newList = filterList(items, Menu);
+            displayItems(newList);
+        }
+        
+        function showOrder() {
+            $('div#view').slideUp();
+            $('div#order').show();
+
+            displayOrders();
+        }
+        
+        function showConfirm() {
+            $('div#order').slideUp();
+            $('div#confirm').show();
+        }
+        
+        function showMenu() {
+            $('div#order').hide();
+            $('div#view').slideDown();
+        }
+
+        function setUp() {
+            $('button#primeiro').click(function () { displayMenu('B'); });
+            $('button#segundo').click(function () { displayMenu('L'); });
+            $('button#terceiro').click(function () { displayMenu('D'); });
+            $('button#viewOrder').click(showOrder);
+            $('button#viewOrder').hide();
+            $('button#place').click(showConfirm);
+            $('button#back').click(showMenu);
+            displayMenu('L');
+            $('div#order').hide();
+            $('div#confirm').hide();
+        }
+
+        $(document).ready(setUp);
+    </script>
+
+</body>
+</html>

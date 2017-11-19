@@ -1,0 +1,3 @@
+Select Clientes.nome, Clientes.Cnpj, Pedidos.Numero, Pedidos.Data, Pedidos.Valor
+From Clientes left join Pedidos
+Order by Clientes.Nome, Pedidos.Data DESC;
